@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,100;1,300;1,700;1,900&display=swap');
+
+* {
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    background: rgb(36, 36, 36);
+    color: aliceblue;
+}
+
+header {
+    height: 100vh;
+    background: url('assets/galaxy.jpg');
+    background-size: 100%;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1 {
+    color: #1f1f1f;
+    font-size: 144px;
+    margin-bottom: 150px;
+    text-align: center;
+    text-shadow: 0 0 15px #ffffff;
+}
+
+button {
+    width: max-content;
+    padding: 10px 20px;
+    font-size: 26px;
+    border-radius: 4px;
+    background: #1f1f1f;
+    color: aliceblue;
+    border: none;
+    box-shadow: 0 0 15px #ffffff;
+}
+
+button:active {
+    transform: scale(.9);
+}
