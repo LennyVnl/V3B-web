@@ -8,7 +8,7 @@
 }
 
 body {
-    background: rgb(36, 36, 36);
+    background: rgb(27, 27, 27);
     color: aliceblue;
 }
 
@@ -60,6 +60,11 @@ button {
 
 button:active {
     transform: scale(.9);
+}
+
+section h2 {
+    margin-bottom: 15px;
+    font-size: 42px;
 }
 
 #rules {
