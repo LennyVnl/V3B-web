@@ -21,6 +21,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 header h1 {
@@ -54,8 +55,14 @@ button {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     transition: .3s all;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 button:active {
     transform: scale(.9);
+}
+
+#rules {
+    padding-left: 100px;
+    padding-right: 100px;
 }
