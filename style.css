@@ -31,6 +31,18 @@ header h1 {
     text-shadow: 0 0 15px #ffffff;
 }
 
+header div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+header div * {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
 button {
     width: max-content;
     padding: 10px 20px;
@@ -39,7 +51,9 @@ button {
     background: #1f1f1f;
     color: aliceblue;
     border: none;
-    box-shadow: 0 0 15px #ffffff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: .3s all;
+    cursor: pointer;
 }
 
 button:active {
