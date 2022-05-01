@@ -7,10 +7,24 @@
     outline: none;
 }
 
+button, p, h1, h2, h3, h4, h5, h6, span, a, img {
+    animation: display .3s ease-in-out;
+}
+
+@keyframes display {
+    from {
+        opacity: 0;
+        transform: scale(.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 body {
     background: rgb(27, 27, 27);
     color: aliceblue;
-    padding-bottom: 150px;
 }
 
 header {
@@ -71,6 +85,7 @@ section h2 {
 #rules {
     padding-left: 100px;
     padding-right: 100px;
+    padding-bottom: 100px;
 }
 
 #rules p {
