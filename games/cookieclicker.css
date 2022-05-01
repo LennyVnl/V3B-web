@@ -1,0 +1,23 @@
+body {
+    background: url(../assets/background.jpg);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+img {
+    aspect-ratio: 1/1;
+    width: 80vh;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#points {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 47px;
+    margin-top: 80px;
+}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,100;1,300;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,100;1,200;1,300;1,700;1,900&display=swap');
 
 * {
     font-family: 'Roboto';
@@ -10,6 +10,7 @@
 body {
     background: rgb(27, 27, 27);
     color: aliceblue;
+    padding-bottom: 150px;
 }
 
 header {
@@ -70,4 +71,38 @@ section h2 {
 #rules {
     padding-left: 100px;
     padding-right: 100px;
+}
+
+#rules p {
+    font-size: 24px;
+    font-weight:lighter;
+}
+
+@media (max-width: 412px) {
+    header {
+        background-size: 1000%;
+    }
+
+    header div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header div button {
+        margin-bottom: 35px;
+        width: 80%;
+    }
+
+    #rules {
+        padding: 15px;
+    }
+    #rules p {
+        font-size: 20px;
+    }
+}
+
+.backBtn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }

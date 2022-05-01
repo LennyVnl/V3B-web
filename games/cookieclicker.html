@@ -1,24 +1,55 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cookie Clicker</title>
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="cookieclicker.css">
 </head>
+
 <body>
-    <p>points: <span>0</span></p>
+    <button class="backBtn">retour</button>
+
+    <p id="points">points: <span>0</span></p>
     <img src="../assets/cookie.png" alt="cookie">
 
     <script>
-        let score = 0
+        let score = getScore()
 
         document.querySelector('img').onclick = () => {
             score += 1
-            document.querySelector('p span').innerHTML = score
+            setScore()
+
+            saveScore(score)
         }
+
+        function saveScore(newScore) {
+            localStorage.setItem('score', newScore)
+        }
+
+        function getScore() {
+            let LSScore = localStorage.getItem('score')
+            if (typeof LSScore != 'number') {
+                LSScore = 0
+            }
+            return parseInt(LSScore)
+        }
+
+        setScore()
+
+        function setScore () {
+            if (score == 1) {
+                document.querySelector('#points').textContent = "point: " + getScore()
+            } else {
+                document.querySelector('#points').textContent = "points: " + getScore()
+            }
+        }
+
     </script>
 </body>
+
 </html>
