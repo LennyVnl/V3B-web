@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <button class="backBtn">retour</button>
+    <button class="backBtn" onclick="window.location.href = '../games.html'">retour</button>
 
     <p id="points">points: <span>0</span></p>
     <img src="../assets/cookie.png" alt="cookie">
@@ -42,10 +42,10 @@
         setScore()
 
         function setScore () {
-            if (score == 1) {
-                document.querySelector('#points').textContent = "point: " + getScore()
+            if (score <= 1) {
+                document.querySelector('#points').textContent = "point: " + score
             } else {
-                document.querySelector('#points').textContent = "points: " + getScore()
+                document.querySelector('#points').textContent = "points: " + score
             }
         }
 
