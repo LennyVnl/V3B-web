@@ -10,7 +10,12 @@ img {
     aspect-ratio: 1/1;
     width: 80vh;
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 50%;    
+    transition: .1s ease-in;
+}
+
+img:active {
+    transform: scale(.95);
 }
 
 #points {

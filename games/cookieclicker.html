@@ -21,6 +21,10 @@
         let score = getScore()
 
         document.querySelector('img').onclick = () => {
+            IncreaseScore()
+        }
+
+        function IncreaseScore() {
             score += 1
             setScore()
 
@@ -32,11 +36,8 @@
         }
 
         function getScore() {
-            let LSScore = localStorage.getItem('score')
-            if (typeof LSScore != 'number') {
-                LSScore = 0
-            }
-            return parseInt(LSScore)
+            if (localStorage.getItem('score') === null) return 0
+            return parseInt(localStorage.getItem('score'))
         }
 
         setScore()
