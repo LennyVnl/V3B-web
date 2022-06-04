@@ -28,6 +28,8 @@
             score += 1
             setScore()
 
+            updateImage()
+
             saveScore(score)
         }
 
@@ -49,6 +51,45 @@
                 document.querySelector('#points').textContent = "points: " + score
             }
         }
+
+        function resetScore() {
+            saveScore(0)
+            setScore(0)
+        }
+
+        const IMAGES = [
+            {
+                "file": "cookie.png",
+                "start": 0
+            },{
+                "file": "pizza.png",
+                "start": 50
+            },{
+                "file": "big-burger.png",
+                "start": 150
+            },{
+                "file": "fries.png",
+                "start": 350
+            },{
+                "file": "sushi.png",
+                "start": 600
+            },{
+                "file": "shrek.png",
+                "start": 1000
+            }
+        ]
+
+        function updateImage() {
+            let image = document.querySelector('body > img')
+
+            IMAGES.forEach(img => {
+                if (img.start <= getScore()) {
+                    image.setAttribute('src', `../assets/${img.file}`)
+                }
+            })
+        }
+
+        updateImage()
 
     </script>
 </body>

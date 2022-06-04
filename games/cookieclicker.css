@@ -8,9 +8,10 @@ body {
 
 img {
     aspect-ratio: 1/1;
-    width: 80vh;
+    width: 60vh;
+    margin-top: 50px;
     cursor: pointer;
-    border-radius: 50%;    
+    border-radius: 10%;    
     transition: .1s ease-in;
 }
 
@@ -24,4 +25,18 @@ img:active {
     margin-left: auto;
     font-size: 47px;
     margin-top: 80px;
+}
+
+@media (max-width: 760px) {
+    .backBtn {
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 520px) {
+    img {
+        width: 40vh;
+    }
 }
