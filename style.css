@@ -5,6 +5,10 @@
     margin: 0;
     padding: 0;
     outline: none;
+
+    /* disable user select */
+    -moz-user-select: none;
+    user-select: none;
 }
 
 button, p, h1, h2, h3, h4, h5, h6, span, a, img {
@@ -25,6 +29,19 @@ button, p, h1, h2, h3, h4, h5, h6, span, a, img {
 body {
     background: rgb(27, 27, 27);
     color: aliceblue;
+}
+
+.weather {
+    background: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    padding: 15px 10px;
+    top: 20px;
+    left: 20px;
+    border-radius: 8px;
+    font-size: 22px;
 }
 
 header {
@@ -118,6 +135,12 @@ section h2 {
     .backBtn {
         position: relative;
     }
+
+    .weather {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85%;
+    }
 }
 
 .backBtn {
@@ -129,3 +152,4 @@ section h2 {
 a {
     color: #fff;
 }
+
